@@ -1,0 +1,144 @@
+CREATE sequence Prisoner_Id_Seq start with 1 increment BY 1 maxvalue 20000000;
+CREATE sequence Visitor_Id_Seq start with 1 increment BY 1 maxvalue 20000000;
+CREATE sequence Policeman_Id_Seq start with 1 increment BY 1 maxvalue 20000000;
+  CREATE TABLE Prisoners
+    (
+      First_Name     VARCHAR2(25),
+      Middle_Initial VARCHAR2(25),
+      Last_Name      VARCHAR2(25),
+      Prisoner_ID    NUMBER(8) NOT NULL PRIMARY KEY,
+      Gender         VARCHAR2(1),
+      Address        VARCHAR2(25),
+      Age            NUMBER(3),
+      Cell_No        NUMBER (10) ,
+      Prison_Name    VARCHAR2(25)
+    );
+  CREATE TABLE Cases
+    (
+      Case_No   NUMBER(8) NOT NULL PRIMARY KEY ,
+      Case_Type VARCHAR2(25),
+      Penalty   NUMBER(2),
+      Crime     VARCHAR2(25)
+    );
+  CREATE TABLE Charged_In
+    (
+      Case_No     NUMBER(8) NOT NULL ,
+      Prisoner_ID NUMBER(8) NOT NULL ,
+      PRIMARY KEY ( Case_No,Prisoner_ID)
+    );
+  CREATE TABLE Prisons
+    (
+      Prison_Name     VARCHAR2(25) PRIMARY KEY NOT NULL ,
+      Locations       VARCHAR2(25),
+      N0_Of_Prisoners NUMBER(8 ),
+      N0_Of_Policemen NUMBER(8 )
+    );
+  CREATE TABLE Cells
+    (
+      Cell_No              NUMBER (10) NOT NULL PRIMARY KEY ,
+      Cell_Type            VARCHAR2(25),
+      No_of_Cell_Prisoners NUMBER(8)
+    );
+  CREATE TABLE Policemen
+    (
+      First_Name     VARCHAR2(25),
+      Middle_Initial VARCHAR2(25),
+      Last_Name      VARCHAR2(25) ,
+      Policeman_ID   NUMBER(8) NOT NULL PRIMARY KEY ,
+      Shift_Time DATE,
+      Shift_Duration NUMBER(2) ,
+      Cell_No        NUMBER (10) REFERENCES Cells(Cell_No),
+      Prison_Name    VARCHAR2 (25) REFERENCES Prisons(Prison_Name)
+    );
+  CREATE TABLE Visitors
+    (
+      First_Name           VARCHAR2(25),
+      Middle_Initial       VARCHAR2(25),
+      Last_Name            VARCHAR2(25),
+      Visitor_ID           NUMBER(8) NOT NULL PRIMARY KEY ,
+      Gender               VARCHAR2(1),
+      Relation_To_Prisoner VARCHAR2(25)
+    );
+  CREATE TABLE Visits
+    (
+      Visitor_ID  NUMBER(8) NOT NULL REFERENCES Visitors(Visitor_ID),
+      Prisoner_ID NUMBER(8)NOT NULL REFERENCES Prisoners(Prisoner_ID),
+      PRIMARY KEY(Visitor_ID,Prisoner_ID),
+      Visit_Date DATE,
+      Visit_Time DATE,
+      Visit_Duration NUMBER(3)
+    );
+  
+  ALTER TABLE Prisoners ADD FOREIGN KEY
+  (
+    Cell_No
+  )
+  REFERENCES Cells
+  (
+    Cell_No
+  )
+  ;
+  ALTER TABLE Prisoners ADD FOREIGN KEY
+  (
+    Prison_Name
+  )
+  REFERENCES Prisons
+  (
+    Prison_Name
+  )
+  ;
+  ALTER TABLE Charged_In ADD FOREIGN KEY
+  (
+    Case_No
+  )
+  REFERENCES Cases
+  (
+    Case_No
+  )
+  ;
+  ALTER TABLE Charged_In ADD FOREIGN KEY
+  (
+    Prisoner_ID
+  )
+  REFERENCES Prisoners
+  (
+    Prisoner_ID
+  )
+  ;
+   ALTER TABLE Prisoners modify
+  (
+      Address        VARCHAR2(50)
+  );
+  alter TABLE Policemen modify
+    (
+      Shift_Time VARCHAR2(25));
+      alter TABLE visits modify
+    (
+      visit_Time VARCHAR2(25));
+      
+  insert into cells values(17,'solo',0);
+  insert into cells values(15,'group',0);
+  insert into cells values(1,'solo',0);
+  insert into cells values(2,'solo',0);
+  insert into cells values(3,'solo',0);
+  insert into cells values(4,'solo',0);
+  insert into cells values(14,'group',0);
+  insert into cells values(18,'solo',0);
+  insert into cells values(16,'solo',0);
+  /*delete from cells;*/
+  insert into Prisons values('May 15 prison','south cairo',0,0);
+  insert into Prisons values('Fayoum prison','fayoum',0,0);
+  /*delete from prisoners;*/
+  insert into PRISONERS values('ahmed','mohamed','mahamoud',12345678,'M','sodan street GIZA',25,17,'May 15 prison');
+  insert into PRISONERS values('mostafa','mohamed','abdallah',14785236,'M','dokki giza',30,15,'Fayoum prison');
+  /*update PRISONS set N0_Of_Prisoners =(select count(*)from PRISONERS where prison_name='May 15 prison')where prison_name='May 15 prison'; 
+  update PRISONS set N0_Of_Prisoners =(select count(*)from PRISONERS where prison_name='Fayoum prison')where prison_name='Fayoum prison'; 
+  */
+  insert into policemen values('mohamed','ali','mahamoud',95236248,'8:00',12,17,'May 15 prison');
+  insert into VISITORS values('ismail','mohamed','mahamoud',12354678,'M','brother');
+  insert into VISITORS values('ali','mohamed','abdallah',12354157,'M','brother');
+  insert into visits values(12354678,12345678,'15 jan 2018','14:00',15);
+  insert into cases values(1598,'felony',15,'murder');
+  insert into charged_in values(1598,12345678);
+  Commit;
+  
