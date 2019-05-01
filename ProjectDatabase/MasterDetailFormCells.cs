@@ -21,7 +21,7 @@ namespace ProjectDatabase
 
         private void MasterDetailFormCells_Load(object sender, EventArgs e)
         {
-            string constr = "User Id=hr;Password=hr;Data Source=orcl";
+            string constr = "User Id=hr;Password=hrr;Data Source=orcl";
             DataSet ds = new DataSet();
 
             OracleDataAdapter adapter1 = new OracleDataAdapter("SELECT * from Cells", constr);

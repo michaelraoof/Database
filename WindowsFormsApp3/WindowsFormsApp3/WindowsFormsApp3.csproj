@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D6E5C22-E41E-4343-A2BB-2609DB0304B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp3</RootNamespace>
+    <AssemblyName>WindowsFormsApp3</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>D:\app\AhmedAbdelaziz\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Delete_case.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_case.Designer.cs">
+      <DependentUpon>Delete_case.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_cell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_cell.Designer.cs">
+      <DependentUpon>Delete_cell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_policeman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_policeman.Designer.cs">
+      <DependentUpon>Delete_policeman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_prison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_prison.Designer.cs">
+      <DependentUpon>Delete_prison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insert_case.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_case.Designer.cs">
+      <DependentUpon>insert_case.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insert_cell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_cell.Designer.cs">
+      <DependentUpon>insert_cell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insert_policeman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_policeman.Designer.cs">
+      <DependentUpon>insert_policeman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insert_prison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_prison.Designer.cs">
+      <DependentUpon>insert_prison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insert_Visitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_Visitor.Designer.cs">
+      <DependentUpon>insert_Visitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cases.Designer.cs">
+      <DependentUpon>Cases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cells.Designer.cs">
+      <DependentUpon>Cells.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_prisoner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_prisoner.Designer.cs">
+      <DependentUpon>Delete_prisoner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Visitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Visitor.Designer.cs">
+      <DependentUpon>Delete_Visitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insert_prisoner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert_prisoner.Designer.cs">
+      <DependentUpon>insert_prisoner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Policeman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Policeman.Designer.cs">
+      <DependentUpon>Policeman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prison.Designer.cs">
+      <DependentUpon>Prison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prisoners.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prisoners.Designer.cs">
+      <DependentUpon>Prisoners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="update_case.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_case.Designer.cs">
+      <DependentUpon>update_case.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_cell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_cell.Designer.cs">
+      <DependentUpon>update_cell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_policeman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_policeman.Designer.cs">
+      <DependentUpon>update_policeman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_prison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_prison.Designer.cs">
+      <DependentUpon>update_prison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_prisoner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_prisoner.Designer.cs">
+      <DependentUpon>Update_prisoner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_Visitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Visitor.Designer.cs">
+      <DependentUpon>Update_Visitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_all_cases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_all_cases.Designer.cs">
+      <DependentUpon>view_all_cases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_all_cells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_all_cells.Designer.cs">
+      <DependentUpon>view_all_cells.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_All_Policemen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_All_Policemen.Designer.cs">
+      <DependentUpon>View_All_Policemen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_all_prisons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_all_prisons.Designer.cs">
+      <DependentUpon>view_all_prisons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_all_prisoners.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_all_prisoners.Designer.cs">
+      <DependentUpon>View_all_prisoners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_All_Visitors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_All_Visitors.Designer.cs">
+      <DependentUpon>View_All_Visitors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_one_case.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_one_case.Designer.cs">
+      <DependentUpon>view_one_case.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_one_cell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_one_cell.Designer.cs">
+      <DependentUpon>view_one_cell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_one_policeman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_one_policeman.Designer.cs">
+      <DependentUpon>view_one_policeman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_one_prison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_one_prison.Designer.cs">
+      <DependentUpon>view_one_prison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_one_prisoner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_one_prisoner.Designer.cs">
+      <DependentUpon>View_one_prisoner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_One_Visitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_One_Visitor.Designer.cs">
+      <DependentUpon>View_One_Visitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visitor.Designer.cs">
+      <DependentUpon>Visitor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cases.resx">
+      <DependentUpon>Cases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cells.resx">
+      <DependentUpon>Cells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_case.resx">
+      <DependentUpon>Delete_case.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_cell.resx">
+      <DependentUpon>Delete_cell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_policeman.resx">
+      <DependentUpon>Delete_policeman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_prison.resx">
+      <DependentUpon>Delete_prison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_prisoner.resx">
+      <DependentUpon>Delete_prisoner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Visitor.resx">
+      <DependentUpon>Delete_Visitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_case.resx">
+      <DependentUpon>insert_case.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_cell.resx">
+      <DependentUpon>insert_cell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_prison.resx">
+      <DependentUpon>insert_prison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_policeman.resx">
+      <DependentUpon>insert_policeman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_prisoner.resx">
+      <DependentUpon>insert_prisoner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert_Visitor.resx">
+      <DependentUpon>insert_Visitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Policeman.resx">
+      <DependentUpon>Policeman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prison.resx">
+      <DependentUpon>Prison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prisoners.resx">
+      <DependentUpon>Prisoners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="update_case.resx">
+      <DependentUpon>update_case.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_cell.resx">
+      <DependentUpon>update_cell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_policeman.resx">
+      <DependentUpon>update_policeman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_prison.resx">
+      <DependentUpon>update_prison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_prisoner.resx">
+      <DependentUpon>Update_prisoner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Visitor.resx">
+      <DependentUpon>Update_Visitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_all_cases.resx">
+      <DependentUpon>view_all_cases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_all_cells.resx">
+      <DependentUpon>view_all_cells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_All_Policemen.resx">
+      <DependentUpon>View_All_Policemen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_all_prisoners.resx">
+      <DependentUpon>View_all_prisoners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_all_prisons.resx">
+      <DependentUpon>view_all_prisons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_All_Visitors.resx">
+      <DependentUpon>View_All_Visitors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_one_case.resx">
+      <DependentUpon>view_one_case.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_one_cell.resx">
+      <DependentUpon>view_one_cell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_one_policeman.resx">
+      <DependentUpon>view_one_policeman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_one_prison.resx">
+      <DependentUpon>view_one_prison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_one_prisoner.resx">
+      <DependentUpon>View_one_prisoner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_One_Visitor.resx">
+      <DependentUpon>View_One_Visitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visitor.resx">
+      <DependentUpon>Visitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

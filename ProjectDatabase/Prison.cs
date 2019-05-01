@@ -24,7 +24,7 @@ namespace ProjectDatabase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string constr = "Data Source=orcl;User Id=hr;Password=hr;";
+            string constr = "Data Source=orcl;User Id=hr;Password=hrr;";
             string cmdstr = @"select * from prisons where prison_name = :pname";
 
             adapterr = new OracleDataAdapter(cmdstr, constr);
@@ -57,6 +57,11 @@ namespace ProjectDatabase
         {
             MasterDetailFormPrison master_form = new MasterDetailFormPrison();
             master_form.Show();
+        }
+
+        private void Prison_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

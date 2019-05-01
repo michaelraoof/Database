@@ -21,7 +21,7 @@ namespace ProjectDatabase
 
         private void MasterDetailFormPolicemen_Load(object sender, EventArgs e)
         {
-            string constr = "User Id=hr;Password=hr;Data Source=orcl";
+            string constr = "User Id=hr;Password=hrr;Data Source=orcl";
             DataSet ds = new DataSet();
 
             OracleDataAdapter adapter1 = new OracleDataAdapter("SELECT * from Prisons", constr);
@@ -39,6 +39,11 @@ namespace ProjectDatabase
 
             dataGridView1.DataSource = bs_Master;
             dataGridView2.DataSource = bs_Child;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

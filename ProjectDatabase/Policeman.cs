@@ -82,5 +82,10 @@ namespace ProjectDatabase
             master_form2.Show();
 
         }
+
+        private void Policeman_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

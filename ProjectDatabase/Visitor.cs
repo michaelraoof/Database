@@ -24,7 +24,7 @@ namespace ProjectDatabase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string constr = "Data Source=orcl;User Id=hr;Password=hr;";
+            string constr = "Data Source=orcl;User Id=hr;Password=hrr;";
             string cmdstr = @"select * from visitors where visitor_id =:id";
 
             OracleDataAdapter adapterr = new OracleDataAdapter(cmdstr, constr);
@@ -51,5 +51,9 @@ namespace ProjectDatabase
             adapterr.Update(dataSett.Tables[0]);
         }
 
+        private void Visitor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

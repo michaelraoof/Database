@@ -97,5 +97,10 @@ namespace ProjectDatabase
             builderr = new OracleCommandBuilder(adapter);
             adapter.Update(dataSett.Tables[0]);
         }
+
+        private void prisoner_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

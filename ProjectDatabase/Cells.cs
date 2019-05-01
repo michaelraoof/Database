@@ -25,7 +25,7 @@ namespace ProjectDatabase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string constr = "Data Source=orcl;User Id=hr;Password=hr;";
+            string constr = "Data Source=orcl;User Id=hr;Password=hrr;";
             string cmdstr = @"select * from Cells where Cell_no =:no";
 
             adapterr = new OracleDataAdapter(cmdstr, constr);
@@ -38,7 +38,7 @@ namespace ProjectDatabase
         private void button2_Click(object sender, EventArgs e)
         {
             List<string> list = new List<string>();
-            string constr = "Data Source=orcl;User Id=hr;Password=hr;";
+            string constr = "Data Source=orcl;User Id=hr;Password=hrr;";
             string cmdstr = "select * from Cells";
 
             adapterr = new OracleDataAdapter(cmdstr, constr);
@@ -58,6 +58,11 @@ namespace ProjectDatabase
         {
             builderr = new OracleCommandBuilder(adapterr);
             adapterr.Update(dataSett.Tables[0]);
+        }
+
+        private void Cells_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

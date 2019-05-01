@@ -41,32 +41,36 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 113);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(450, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(600, 407);
             this.dataGridView1.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 15);
+            this.label1.Location = new System.Drawing.Point(44, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 21;
             this.label1.Text = "policeman Id";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(164, 8);
+            this.textBox1.Location = new System.Drawing.Point(219, 10);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 18;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(337, 63);
+            this.button2.Location = new System.Drawing.Point(449, 78);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 23);
+            this.button2.Size = new System.Drawing.Size(153, 28);
             this.button2.TabIndex = 26;
             this.button2.Text = "select all rows";
             this.button2.UseVisualStyleBackColor = true;
@@ -74,9 +78,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(77, 63);
+            this.button1.Location = new System.Drawing.Point(103, 78);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 25;
             this.button1.Text = "search";
             this.button1.UseVisualStyleBackColor = true;
@@ -84,9 +89,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(377, 429);
+            this.button3.Location = new System.Drawing.Point(503, 528);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 27;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = true;
@@ -94,9 +100,10 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(188, 63);
+            this.button4.Location = new System.Drawing.Point(251, 78);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 23);
+            this.button4.Size = new System.Drawing.Size(153, 28);
             this.button4.TabIndex = 29;
             this.button4.Text = "Master Detail From";
             this.button4.UseVisualStyleBackColor = true;
@@ -104,9 +111,9 @@
             // 
             // Policeman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 462);
+            this.ClientSize = new System.Drawing.Size(619, 569);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
@@ -114,8 +121,10 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Policeman";
             this.Text = "Policeman";
+            this.Load += new System.EventHandler(this.Policeman_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
