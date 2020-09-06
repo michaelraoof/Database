@@ -1,3 +1,3 @@
 # Prisoners System
 
-![Image of Yaktocat](https://github.com/michaelraoof/Database/ERD2.png)
+![ERD](/ERD2.png)
